@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: 0;
+    text-align: center;
+    padding: 2rem 15rem;
+}
+
+h1{
+    font-size: 2rem;
+    font-family: cursive;
+    color: #4a4a4a;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input:focus{
+    outline: none;
+}
