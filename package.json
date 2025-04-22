@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/Threephop/Chat-App/issues"
   },
-  "homepage": "https://github.com/Threephop/Chat-App#readme"
+  "homepage": "https://github.com/Threephop/Chat-App#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2",
+    "socket.io": "^4.8.1"
+  }
 }
