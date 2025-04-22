@@ -10,3 +10,5 @@ npm run dev
 npm init -y
 โหลด Package Fullstack
 npm install express dotenv cookie-parser bcryptjs mongoose socket.io jsonwebtoken
+
+npm run server

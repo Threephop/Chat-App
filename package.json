@@ -4,7 +4,7 @@
   "description": "Download nodeJS https://nodejs.org/en/download\r npm create vite@latest .\r React -> JS\r npm install\r npm run dev",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "node backend/server.js"
   },
   "repository": {
     "type": "git",
