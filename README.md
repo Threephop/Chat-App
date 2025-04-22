@@ -12,3 +12,4 @@ npm init -y
 npm install express dotenv cookie-parser bcryptjs mongoose socket.io jsonwebtoken
 
 npm run server
+npm install nodemon --save-dev
