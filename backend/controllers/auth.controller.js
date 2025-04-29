@@ -1,5 +1,6 @@
 import bcrypt from "bcryptjs";
 import User from "../models/user.model.js";
+import generateTokenAndSetCookie from "../utils/generateToken.js";
 
 export const signup = async (req, res) => {
     try {
@@ -30,14 +31,46 @@ export const signup = async (req, res) => {
             profilePic: gender === "male" ? boyProfilePic : girlProfilePic
         });
 
-        await newUser.save();
+        if(newUser){
+            //generate a token here if needed
+            generateTokenAndSetCookie(newUser._id, res);
+            await newUser.save();
+            
+            res.status(201).json({
+                message: "User created successfully",
+                _id: newUser._id,
+                fullName: newUser.fullName,
+                username: newUser.username,
+                profilePic: newUser.profilePic
+            });
+        } else {
+            res.status(400).json({ message: "User not created" });
+        }
 
-        res.status(201).json({
-            message: "User created successfully",
-            _id: newUser._id,
-            fullName: newUser.fullName,
-            username: newUser.username,
-            profilePic: newUser.profilePic
+    } catch (error) {
+        console.error("Error during signup:", error.message);
+        res.status(500).send("Internal Server Error");
+    }
+}
+
+export const login = async (req, res) => {
+    try{
+        const { username, password } = req.body;
+        const user = await User.findOne({ username });
+        const isPasswordCorrect = await bcrypt.compare(password, user?.password || ""); //// password is empty string if user not found
+
+        if(!user || !isPasswordCorrect){
+            return res.status(400).json({ message: "Invalid credentials" });
+        }
+
+        generateTokenAndSetCookie(user._id, res);
+
+        res.status(200).json({
+            message: "User logged in successfully",
+            _id: user._id,
+            fullName: user.fullName,
+            username: user.username,
+            profilePic: user.profilePic
         });
 
     } catch (error) {
@@ -46,12 +79,17 @@ export const signup = async (req, res) => {
     }
 }
 
-export const login = (req, res) => {
-    console.log("Login User");
-    res.send("Login User");
-}
-
 export const logout = (req, res) => {
-    console.log("Logout User");
-    res.send("Logout User");
+    try{
+        res.cookie("jwt", "", {
+            maxAge: 0,
+            httpOnly: true,
+            sameSite: 'strict',
+            secure : process.env.NODE_ENV !== 'development'
+        });
+        res.status(200).json({ message: "User logged out successfully" });
+    } catch (error) {
+        console.error("Error during signup:", error.message);
+        res.status(500).send("Internal Server Error");
+    }
 }
