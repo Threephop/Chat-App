@@ -12,4 +12,6 @@ npm init -y
 npm install express dotenv cookie-parser bcryptjs mongoose socket.io jsonwebtoken
 
 npm run server
-npm install nodemon --save-dev
+npm install nodemon --save-
+Generate secret key
+openssl rand -base64 32
