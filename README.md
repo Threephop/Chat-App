@@ -1,17 +1,6 @@
 # Chat-App
 
-Download nodeJS https://nodejs.org/en/download
-เปิด cmd แล้วทำการสร้าง React Project
-npm create vite@latest .
-React -> JS
-npm install
-npm run dev
-สร้าง package.json มาเก็บ package ต่างๆ
-npm init -y
-โหลด Package Fullstack
-npm install express dotenv cookie-parser bcryptjs mongoose socket.io jsonwebtoken
+โปรเจกต์นี้พัฒนาโดยอ้างอิงความรู้และโครงสร้างจาก burakorkmez
+ซึ่งเผยแพร่โค้ดไว้ภายใต้ MIT License
 
-npm run server
-npm install nodemon --save-
-Generate secret key
-openssl rand -base64 32
+ขอขอบคุณสำหรับการแบ่งปันความรู้และทรัพยากรที่มีคุณค่า
