@@ -15,5 +15,5 @@ const conversationSchema = new mongoose.Schema({
     timestamps: true // Automatically add createdAt and updatedAt fields
 });
 
-const Convarsation = mongoose.model("Convarsation", conversationSchema);
-export default Convarsation;
+const Conversation = mongoose.model("Conversation", conversationSchema);
+export default Conversation;
