@@ -12,4 +12,16 @@ npm install express dotenv cookie-parser bcryptjs mongoose socket.io jsonwebtoke
 npm run server
 npm install nodemon --save-
 Generate secret key
-openssl rand -base64 32
+openssl rand -base64 
+
+npm install tailwindcss @tailwindcss/vite
+แก้ไข vite.config.js
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite' //เพิ่ม import
+export default defineConfig({
+  plugins: [
+    tailwindcss(), เพิ่ม plugins
+  ],
+})
+daisyUI
+npm i -D daisyui@latest
