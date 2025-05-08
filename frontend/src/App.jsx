@@ -31,7 +31,7 @@ function App() {
             <p className="text-base-content">This is a sample application using React, Tailwind, and daisyUI.</p>
           </section>
 
-          <section className="space-y-4">
+          <section className="space-y-4 mb-8">
             <h2 className="text-2xl font-bold">Counter</h2>
             <p className="text-lg">Count: <span className="font-mono">{count}</span></p>
             <button className="btn btn-primary" onClick={() => setCount(count + 1)}>Increment</button>
@@ -44,6 +44,19 @@ function App() {
               <button className="btn btn-soft btn-success">Success</button>
               <button className="btn btn-soft btn-warning">Warning</button>
               <button className="btn btn-soft btn-error">Error</button>
+            </div>
+          </section>
+          <section className="m-auto py-2px">
+            <div className="mb-4">
+              <h2 className="text-ms text-emerald-600 dark:text-sky-400">Dropdown</h2>
+            </div>
+            <div className="m-auto">
+              <button className='btn btn-lg	btn-block' popoverTarget='dropdown' style={{anchorName: "--anchor-1"}}>Select</button>
+                <ul className="dropdown dropdown-content menu bg-base-100 rounded-box z-1 w-full p-2 shadow-sm"
+                  popover="auto" id="dropdown" style={{positionAnchor: "--anchor-1"}}>
+                  <li><a>1</a></li>
+                  <li><a>2</a></li>
+                </ul>
             </div>
           </section>
         </main>
