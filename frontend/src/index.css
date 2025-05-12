@@ -1,18 +1,17 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
 :root {
   margin: 0;
   min-width: none;
   min-height: none;
 }
 
-body {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/bg.jpg");
-    /* https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJsdXUlMjB3YWxsfGVufDB8fHx8MTY4NzQ1NTYyOA&ixlib=rb-4.0.3&q=80&w=1080 */
+/* https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJsdXUlMjB3YWxsfGVufDB8fHx8MTY4NzQ1NTYyOA&ixlib=rb-4.0.3&q=80&w=1080 */
+/* body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
+} */
