@@ -24,6 +24,9 @@ const useSignup = () => {
       });
 
         const data = await res.json();
+      if (res.ok) {
+          toast.success('Signup successful !');
+        }
         console.log('Signup response:', data);
 
     } catch (error) {
