@@ -10,7 +10,6 @@ const Sidebar = () => {
         <SearchInput />
         <div className='divider px-3'></div>
 
-        {/* ส่วนที่มี scrollbar */}
         <div className='flex-1 overflow-auto'>
           <Conversations />
         </div>

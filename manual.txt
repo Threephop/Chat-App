@@ -26,3 +26,4 @@ export default defineConfig({
 daisyUI
 npm i -D daisyui@latest
 npm install react-icons --save
+npm i react-router-dom
