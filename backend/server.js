@@ -5,12 +5,16 @@ import authRoutes from './routes/auth.routes.js';
 import messageRoutes from './routes/message.routes.js';
 import connectToMongoDB from './db/connectToMongoDB.js';
 import userRoutes from './routes/user.routes.js';
+import cors from 'cors';
  
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 dotenv.config();
-
+// Configure CORS to allow requests from the client URL
+app.use(cors({
+  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+}));
 app.use(express.json());
 app.use(cookieParser());
 
