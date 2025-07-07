@@ -3,7 +3,13 @@ import Conversation from './Conversation'
 
 const Conversations = () => {
   return (
-    <div className='py-2 flex flex-col overflow-auto'>
+    <div className='py-2 flex flex-col'>
+        <Conversation />
+        <Conversation />
+        <Conversation />
+        <Conversation />
+        <Conversation />
+        <Conversation />
         <Conversation />
         <Conversation />
         <Conversation />
@@ -13,3 +19,17 @@ const Conversations = () => {
 }
 
 export default Conversations
+
+//start code
+// const Conversations = () => {
+//   return (
+//     <div className='py-2 flex flex-col overflow-auto'>
+//         <Conversation />
+//         <Conversation />
+//         <Conversation />
+//         <Conversation />
+//     </div>
+//   )
+// }
+
+// export default Conversations
