@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import toast from 'react-hot-toast';
 
+const backend_url = import.meta.env.VITE_BACKEND_URL;
+
 const useSignup = () => {
   const [loading, setLoading] = useState(false);
   const signup = async ({fullName, username, password, confirmPassword, gender}) => {
@@ -9,7 +11,7 @@ const useSignup = () => {
     if (!success) return;
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/api/auth/signup', {
+      const res = await fetch(`${backend_url}/api/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
